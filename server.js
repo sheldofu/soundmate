@@ -9,11 +9,11 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(express.static('templates'));
-app.use(express.static(__dirname + '/js'))
+app.use(express.static('static'));
+// app.use(express.static(__dirname + '/js'))
 
 app.get('/', function(req, res){
-  res.sendfile('templates/main.html')
+  res.sendfile('static/example_simple_exportwav.html')
 });
 
 // app.get('/blog/all', function(req, res){
